@@ -6,4 +6,4 @@ SELECT
     amount / 100 as amount,
     created as created_at
 FROM
-    dbt_raw.stripe.payment
+    {{ source('stripe','payment')}}
